@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@400;600&family=Inter:wght@400;600&display=swap');
+@import "tailwindcss";
+
+/* Variáveis globais */
+:root {
+    --font-sans: "Lato", sans-serif;
+    --font-title: "Playwrite HU", cursive;
+
+    /* Amarelo  */
+    --color-carrot-orange-50: #fffaea;
+    --color-carrot-orange-100: #fff1c6;
+    --color-carrot-orange-200: #ffe287;
+    --color-carrot-orange-300: #ffcd49;
+    --color-carrot-orange-400: #ffb71f;
+    --color-carrot-orange-500: #f18e04;
+    --color-carrot-orange-600: #de6d01;
+    --color-carrot-orange-700: #b84a05;
+    --color-carrot-orange-800: #95390b;
+    --color-carrot-orange-900: #7b2f0c;
+    --color-carrot-orange-950: #471601;
+
+    /* Tons cinza */
+    --color-gray-50: #FAFAFA;
+    --color-gray-100: #F5F5F5;
+    --color-gray-200: #EEEEEE;
+    --color-gray-400: #BDBDBD;
+    --color-gray-600: #757575;
+    --color-gray-800: #424242;
+    --color-gray-900: #212121;
+
+    /* Neutros e texto */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+
+body {
+    @apply font-sans;
+    font-family: var(--font-sans);
+
+    background: linear-gradient(to bottom,
+            var(--color-carrot-orange-200),
+            var(--color-carrot-orange-400));
+
+    color: var(--color-carrot-orange-900);
+}
+
+/* Classe Global - fonte específica para o título */
+.title-font {
+    font-family: var(--font-title);
+}
+
+.text-shadow {
+   text-shadow: 1px 1px 8px #ffb71f;; /* sombra suave */
+}
+
+.text-shadow2 {
+   text-shadow: 1px 1px 10px #ffb71f;; /* sombra suave */
+}
+
+.text-shadow-gray {
+  text-shadow: 1px 1px 12px var(--color-gray-600);
+  /* deslocamento-x deslocamento-y desfoque cor; */
+}
