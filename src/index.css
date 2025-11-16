@@ -3,34 +3,70 @@
 
 /* Variáveis globais */
 :root {
-    --font-sans: "Lato", sans-serif;
-    --font-title: "Playwrite HU", cursive;
+    --font-sans: "Inter", sans-serif;
+    --font-title: "Playfair Display", serif;
 
-    /* Amarelo  */
-    --color-carrot-orange-50: #fffaea;
-    --color-carrot-orange-100: #fff1c6;
-    --color-carrot-orange-200: #ffe287;
-    --color-carrot-orange-300: #ffcd49;
-    --color-carrot-orange-400: #ffb71f;
-    --color-carrot-orange-500: #f18e04;
-    --color-carrot-orange-600: #de6d01;
-    --color-carrot-orange-700: #b84a05;
-    --color-carrot-orange-800: #95390b;
-    --color-carrot-orange-900: #7b2f0c;
-    --color-carrot-orange-950: #471601;
+    /* Preto */
+    --color-dark-900: #0A0A0A;
+    --color-dark-800: #111111;
 
-    /* Tons cinza */
-    --color-gray-50: #FAFAFA;
-    --color-gray-100: #F5F5F5;
-    --color-gray-200: #EEEEEE;
-    --color-gray-400: #BDBDBD;
-    --color-gray-600: #757575;
-    --color-gray-800: #424242;
-    --color-gray-900: #212121;
+    /* Tons de amarelo Elegante */
+    --amarelo-50: #FFF9E6;
+    --amarelo-100: #FFF2CC;
+    --amarelo-200: #FFE699;
+    --amarelo-300: #FFDB66;
+    --amarelo-400: #FFD133;
+    --amarelo-500: #FFC700;
+    --amarelo-600: #E6B700;
+    --amarelo-700: #CCA600;
+    --amarelo-800: #B38F00;
+    --amarelo-900: #997700;
 
-    /* Neutros e texto */
-    --color-white: #FFFFFF;
-    --color-black: #000000;
+
+    /* Branco */
+    --color-white-100: #FFFFFF;
+    --color-white-200: #F8F8F8;
+
+    /* Cinzas */
+    --color-gray-50: #E6E6E6;
+    --color-gray-200: #C8C8C8;
+    --color-gray-400: #A0A0A0;
+    --color-gray-600: #7A7A7A;
+    --color-gray-800: #4A4A4A;
+    --color-gray-900: #313131;
+    --color-gray-black: #1f1f1f;
+
+    /* Tons prateados */
+    --color-silver-100: #D9D9D9;
+    --color-silver-200: #BFBFBF;
+    --color-silver-300: #A6A6A6;
+
+    /* Vermelho Elegante */
+    --vermelho-50: #F8E7E8;
+    --vermelho-100: #F2D0D2;
+    --vermelho-200: #E3A7A9;
+    --vermelho-300: #D08081;
+    --vermelho-400: #B9545A;
+    --vermelho-500: #A12831;
+    --vermelho-600: #8A1E28;
+    --vermelho-700: #731921;
+    --vermelho-800: #5C141A;
+    --vermelho-900: #450E12;
+
+    /* Neutros */
+    --color-black: #1f1f1f;
+    --color-white: #ffffff;
+
+    --bege-50: #FFF8F0;
+    --bege-100: #FEEBD9;
+    --bege-200: #FDDCB3;
+    --bege-300: #FCCD8C;
+    --bege-400: #FBBF66;
+    --bege-500: #FAA140;
+    --bege-600: #E69138;
+    --bege-700: #CC7A30;
+    --bege-800: #B36228;
+    --bege-900: #995020;
 }
 
 
@@ -38,27 +74,30 @@ body {
     @apply font-sans;
     font-family: var(--font-sans);
 
-    background: linear-gradient(to bottom,
-            var(--color-carrot-orange-200),
-            var(--color-carrot-orange-400));
+    background: radial-gradient(circle at top left,
+            #ffffff 0%,
+            #f5f5f7 35%,
+            #A6A6A6 100%);
 
-    color: var(--color-carrot-orange-900);
+    color: var(--color-dark-900);
 }
 
-/* Classe Global - fonte específica para o título */
+/* Tipografia para títulos */
 .title-font {
     font-family: var(--font-title);
 }
 
+/* Sombra */
 .text-shadow {
-   text-shadow: 1px 1px 8px #ffb71f;; /* sombra suave */
+    text-shadow: 1px 1px 8px var(--color-silver-200);
 }
 
+/* Sombra intensa para títulos*/
 .text-shadow2 {
-   text-shadow: 1px 1px 10px #ffb71f;; /* sombra suave */
+    text-shadow: 1px 1px 12px var(--color-silver-300);
 }
 
+/* Sombra cinza extos menores */
 .text-shadow-gray {
-  text-shadow: 1px 1px 12px var(--color-gray-600);
-  /* deslocamento-x deslocamento-y desfoque cor; */
+    text-shadow: 0px 5px 12px var(--color-gray-900);
 }
