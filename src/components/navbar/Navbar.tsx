@@ -33,9 +33,10 @@ function Navbar() {
                     Blog Pessoal </Link>
 
                 <div className='flex gap-4 text-lg font-bold text-shadow2 space-x-6'>
-                    <div>Postagem</div>
-                    <div>Temas</div>
-                    <div>Cadastrar Tema</div>
+                    <div><Link to='/postagens' className='hover:underline'>Postagens</Link></div>
+                    <div><Link to='/temas' className='hover:underline'>Temas</Link></div>
+                    <div><Link to='/cadastrartema' className='hover:underline'>Cadastrar tema</Link></div>
+                    <div>Perfil</div>
                     <div><Link to='' onClick={logout} className='hover:underline'>Sair</Link></div>
                 </div>
             </div>

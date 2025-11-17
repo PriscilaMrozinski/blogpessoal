@@ -3,6 +3,8 @@ import type UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../services/Services";
 
 
+// Objetivo da Context: manipular login temporariamente
+
 // Criar Interface
 interface AuthContextProps {
     usuario: UsuarioLogin
