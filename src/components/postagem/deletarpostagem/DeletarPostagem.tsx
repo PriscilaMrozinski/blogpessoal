@@ -83,7 +83,7 @@ function DeletarPostagem() {
 
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
                 <header 
-                    className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
+                    className='py-2 px-6 bg-gray-600 text-white font-bold text-2xl'>
                     Postagem
                 </header>
                 <div className="p-4">

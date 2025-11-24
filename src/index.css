@@ -71,7 +71,6 @@
 
 
 body {
-    @apply font-sans;
     font-family: var(--font-sans);
 
     background: radial-gradient(circle at top left,

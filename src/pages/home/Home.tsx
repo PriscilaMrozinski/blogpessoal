@@ -2,9 +2,12 @@ import ListaPostagens from "../../components/postagem/listapostagens/ListaPostag
 import ModalPostagem from "../../components/postagem/modalpostagem/ModalPostagem"
 
 function Home() {
+
+ 
+
     return (
         <>
-       
+
             <div className="flex justify-center  text-gray-black">
 
                 {/* Grid que divide a tela em 2 colunas */}
@@ -39,7 +42,9 @@ function Home() {
                             src="https://ik.imagekit.io/okf70gijs/p.png"
                             alt="Imagem da Página Home"
                             className="w-full"
-                        />
+                        />                 
+
+         
                     </div>
                 </div>
             </div>
