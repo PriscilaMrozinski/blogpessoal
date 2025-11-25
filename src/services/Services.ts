@@ -2,7 +2,8 @@ import axios from "axios"
 
 // Informar endereço da API:
 const api = axios.create({
-    baseURL:'https://blogpessoal-j31y.onrender.com' // guarda o endereço da API, para onde as requisições serão enviadas
+    baseURL: import.meta.env.VITE_API_URL
+    // guarda o endereço da API, para onde as requisições serão enviadas, o endereço do render
 })
 
 // Função de Cadastrar Usuario:
