@@ -11,7 +11,7 @@ function CardPostagem({ postagem }: CardPostagensProps) {
             flex flex-col rounded overflow-hidden justify-between'>
 
             <div>
-                <div className="flex w-full bg-indigo-50 py-2 px-4 items-center gap-4">
+                <div className="flex w-full bg-yellow-50 py-2 px-4 items-center gap-4 text-gray-600">
                     <img
                         src={postagem.usuario?.foto}
                         className='h-12 rounded-full'
@@ -20,7 +20,7 @@ function CardPostagem({ postagem }: CardPostagensProps) {
                         {postagem.usuario?.nome}
                     </h3>
                 </div>
-                <div className='p-4 bg-slate-200'>
+                <div className='p-4 bg-yellow-50 text-gray-800'>
                     <h4 className='text-lg font-semibold uppercase'>{postagem.titulo}</h4>
                     <p>{postagem.texto}</p>
                     <p>Tema: {postagem.tema?.descricao}</p>
@@ -33,14 +33,13 @@ function CardPostagem({ postagem }: CardPostagensProps) {
             <div className="flex">
 
                 <Link to={`/editarpostagem/${postagem.id}`}
-                    className='w-full text-white bg-gray-500 
-                    hover:bg-yellow-500 flex items-center justify-center py-2'>
+                    className='w-full text-white bg-linear-to-r from-yellow-500 to-yellow-600  
+                   hover:from-gray-500 hover:to-gray-600 flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
                     
                 <Link to={`/deletarpostagem/${postagem.id}`}
-                    className='text-white bg-gray-200 
-                    hover:bg-red-700 w-full flex items-center justify-center'>
+                    className='text-white bg-gray-200 hover:bg-gray-600 w-full flex items-center justify-center'>
                     <button>Deletar</button>
                 </Link>
             </div>

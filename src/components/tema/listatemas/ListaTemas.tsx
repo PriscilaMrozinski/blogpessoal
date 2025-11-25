@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
 import type Tema from "../../../models/Tema";
 import { SyncLoader } from "react-spinners";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 
 function ListaTemas() {
@@ -35,7 +36,7 @@ function ListaTemas() {
     // 6º Passo - useEffect do navigate: monitora se está logado -- if (token === '') : se token estiver vazio -- navigate('/'): envia para a tela de login
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado!')
+            ToastAlerta('Você precisa estar logado!', 'erro')
             navigate('/')
         }
     }, [token])

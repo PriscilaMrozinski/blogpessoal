@@ -5,6 +5,7 @@ import type Postagem from "../../../models/Postagem"
 
 import { ClipLoader } from "react-spinners"
 import { buscar, deletar } from "../../../services/Services"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 function DeletarPostagem() {
 
@@ -34,7 +35,8 @@ function DeletarPostagem() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            ToastAlerta('Você precisa estar logado', 'erro')
+            
             navigate('/')
         }
     }, [token])
@@ -55,13 +57,14 @@ function DeletarPostagem() {
                 }
             })
 
-            alert('Postagem apagada com sucesso')
+           ToastAlerta('Postagem apagada com sucesso', 'sucesso')
 
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 handleLogout()
             }else {
-                alert('Erro ao deletar a postagem.')
+                ToastAlerta('Erro ao deletar a postagem.', 'erro');
+               
             }
         }
 
@@ -75,30 +78,29 @@ function DeletarPostagem() {
     
     return (
         <div className='container w-1/3 mx-auto'>
-            <h1 className='text-4xl text-center my-4'>Deletar Postagem</h1>
+            <h1 className='text-4xl text-center my-4 text-gray-800'>Deletar Postagem</h1>
 
-            <p className='text-center font-semibold mb-4'>
+            <p className='text-center font-semibold mb-4 text-gray-800'>
                 Você tem certeza de que deseja apagar a postagem a seguir?
             </p>
 
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
                 <header 
-                    className='py-2 px-6 bg-gray-600 text-white font-bold text-2xl'>
+                    className='py-2 px-6 bg-yellow-50 text-gray-800 font-bold text-2xl'>
                     Postagem
                 </header>
-                <div className="p-4">
-                    <p className='text-xl h-full'>{postagem.titulo}</p>
-                    <p>{postagem.texto}</p>
+                <div className="p-4 text-gray-600 bg-yellow-50">
+                    <p className='text-xl h-full text-gray-600 bg-yellow-50'>{postagem.titulo}</p>
+                    <p className='text-xl h-full text-gray-600 bg-yellow-50'>{postagem.texto}</p>
                 </div>
                 <div className="flex">
                     <button 
-                        className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
+                        className='text-slate-100 bg-gray-200 hover:bg-gray-600  w-full py-2'
                         onClick={retornar}>
                         Não
                     </button>
                     <button 
-                        className='w-full text-slate-100 bg-indigo-400 
-                        hover:bg-indigo-600 flex items-center justify-center'
+                        className='w-full text-slate-100 bg-linear-to-r from-yellow-500 to-yellow-600 hover:from-gray-500 hover:to-gray-600 flex items-center justify-center'
                         onClick={deletarPostagem}>
 
                         { isLoading ? 

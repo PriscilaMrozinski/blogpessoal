@@ -1,6 +1,7 @@
 import { createContext, useState, type ReactNode } from "react";
 import type UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../services/Services";
+import { ToastAlerta } from "../utils/ToastAlerta";
 
 
 // Objetivo da Context: manipular login temporariamente
@@ -40,9 +41,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
         try {
             await login(`/usuarios/logar`, usuarioLogin, setUsuario);
-            alert("Usuário autenticado com sucesso!");
+            ToastAlerta("Usuário foi autenticado com sucesso!", "sucesso") 
         } catch (error) {
-            alert("Os dados do usuário estão inconsistentes!")
+            ToastAlerta("Os dados do Usuário estão inconsistentes!", "erro")
         }
 
         setIsLoading(false); //descarregar a animação
