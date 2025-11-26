@@ -3,7 +3,7 @@ import axios from "axios"
 // Informar endereço da API:
 const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL
-    // guarda o endereço da API, para onde as requisições serão enviadas, o endereço do render
+    // guarda o endereço da API, para onde as requisições serão enviadas, o endereço do render .env
 })
 
 // Função de Cadastrar Usuario:
